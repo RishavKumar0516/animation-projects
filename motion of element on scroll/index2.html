@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>motion of element on scrolling</title>
+    <style>
+        *{
+            margin :0;
+            padding:0;
+        }
+        .container{
+            width:100%;
+            background:dodgerblue;
+        }
+        .section{
+            position:sticky;
+            top:0;
+            width:100%;
+            height:100vh;
+        }
+        .section:nth-child(1){
+            background:cadetblue;
+        }
+        .section:nth-child(2){
+            background:cornflowerblue;
+        }
+        .section:nth-child(3){
+            background:dimgrey;
+        }
+        img{
+            position:absolute;
+            top:200px;
+            left:0px;
+            transition:0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <img id="ele" src="bubble2.png" alt="">
+    </div>
+
+    <script>
+
+        window.addEventListener('scroll',function(){
+             let ele =  document.getElementById("ele");
+            // let scroll = scrollY;
+            //  console.log(scroll);
+
+            let revel = document.querySelectorAll(".section");
+            for( i=0;i<revel.length;i++){
+
+            let windowHeight =  window.innerHeight;
+            console.log(windowHeight);
+            let reveltop = revel[i].getBoundingClientRect().bottom;
+            console.log(reveltop);
+            let revelpoint = 150;
+                ele.style.top = + -(windowHeight+revelpoint-reveltop) + "px";
+
+
+            }
+
+
+        });
+    </script>
+</body>
+</html>

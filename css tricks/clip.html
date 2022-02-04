@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clipping</title>
+    <style>
+        /*-----clip css generator-------*/
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width:100%;
+            position: relative;
+            border:2px solid blue;
+        }
+
+        .wrapper {
+
+            height:100vh;
+            background: rgb(78, 194, 230);
+            clip-path: polygon(0% 0%, 26% 0, 58% 49%, 30% 100%, 0% 100%);
+        }
+
+        img {
+            width:350px;
+            height:450px;
+            position: absolute;
+            right: 120px;
+            top: 90px;
+            object-fit:cover;
+
+        }
+        span{
+            content:"";
+            display:flex;
+            justify-content:center;
+            position:absolute;
+            right: 110px;
+            z-index:-1;
+            top: 200px;
+            width:400px;
+            height:300px;
+            clip-path: circle(40.7% at 50% 50%);
+
+            background:rgb(78, 194, 230);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="wrapper"></div>
+        <img src="model.png" alt="">
+        <span></span>
+    </div>
+</body>
+
+</html>

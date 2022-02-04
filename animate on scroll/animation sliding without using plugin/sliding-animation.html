@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation on scrolling 2</title>
+     <link rel="stylesheet" href="style.css">
+
+         <!-- these is the downloadable css file of the aos scroll animation -->
+    <!-- <link rel="stylesheet" href="aos-animation/aos.css"> -->
+
+    <!-- these is the css Aos CDN link which helps to perform scroll animation -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+
+</head>
+<body>
+
+   <section>
+       <h1 data-aos="fade-right">Revel Element On Scroll</h1>
+   </section>
+   
+   <section>
+       <div class="container reveal" data-aos="fade-up"
+       data-aos-duration="3000">
+           <h2>Your Title</h2>
+           <div class="cards">
+
+               <div class="text-card ">
+                   <h3>Title</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                   </p>
+               </div>
+
+               <div class="text-card">
+                   <h3>Title</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                   </p>
+               </div>
+
+               <div class="text-card">
+                   <h3>Title</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                   </p>
+               </div>
+
+           </div>
+       </div>
+   </section>
+
+   <section>
+       <div class="container reveal">
+           <h2>Your Title</h2>
+           <div class="cards">
+
+               <div class="text-card"  data-aos="flip-left">
+                   <h3>Title</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                   </p>
+               </div>
+
+               <div class="text-card" data-aos="flip-up">
+                   <h3>Title</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                   </p>
+               </div>
+
+               <div class="text-card" data-aos="flip-right">
+                   <h3>Title</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                   </p>
+               </div>
+
+           </div>
+       </div>
+   </section>
+
+   <section>
+       <div class="container reveal">
+           <h2>Your Title</h2>
+           <div class="cards">
+
+               <div class="text-card">
+                   <h3>Title</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                   </p>
+               </div>
+
+               <div class="text-card">
+                   <h3>Title</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                   </p>
+               </div>
+
+               <div class="text-card">
+                   <h3>Title</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                   </p>
+               </div>
+
+           </div>
+       </div>
+   </section>
+
+
+
+
+
+
+
+
+
+    <!-- javascript code -->
+
+
+    <!-- these is J-Query CDN having no any relation with the scroll animation . these is used when j-Query code is written -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+
+    
+
+    <!-- scroll animation -->
+
+    
+    <!-- these is the downloadable javascript file of the aos scroll animation -->
+    <!-- <script src="aos-animation/aos.js"></script> -->
+
+
+    <!-- these is the  Aos javascript CDN link which helps to perform scroll animation -->
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+
+<!-- these is initialization  -->
+    <!-- <script>
+         AOS.init( {
+             offset:200,
+             duration:2000,
+         });
+    </script> -->
+
+
+
+
+<!--  writing our own code for animation on scrolling -->
+    <script>
+
+
+      window.addEventListener('scroll', reveal);/* whenever we scroll the window the reveal function get called */
+
+      function reveal(){
+          var reveals = document.querySelectorAll(".reveal");
+          for(var i=0;i< reveals.length;i++){
+              /* Two properties can be used to determine the size of the browser window.
+
+              Both properties return the sizes in pixels:
+
+              window.innerHeight - the inner height of the browser window (in pixels)
+              window.innerWidth - the inner width of the browser window (in pixels) */
+              var windowheight = window.innerHeight; 
+              console.log(windowheight); 
+              console.log(window.innerWidth); 
+              var revealtop = reveals[i].getBoundingClientRect().top;
+              console.log(revealtop); 
+              var revealpoint = 150;
+
+              if(revealtop < windowheight -  revealpoint){
+                reveals[i].classList.add("active");
+              }
+              else{
+                reveals[i].classList.remove("active"); 
+              }
+          }
+      }
+    </script>
+</body>
+</html>

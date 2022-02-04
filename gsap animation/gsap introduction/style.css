@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    width:100%;
+    background:#f1f1f1;
+    height:200vh;
+}
+.box{
+    width:100px;
+    height:100px;
+    box-shadow:2px 2px 1px 3px black;
+    border-radius:15px;
+    margin:160px;
+    text-align:center;
+    line-height:100px;
+}
+.a{
+   background:aquamarine;
+}
+.b{
+    background:blue;
+}
+.c{
+    background:cadetblue;
+}
+
+
+/* code for another setion  */

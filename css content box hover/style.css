@@ -1,0 +1,132 @@
+body{
+    margin:0;
+    padding:0;
+    background:#262626;
+    font-family:verdana;
+    height:100vh;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.box{
+    position:relative;
+    /*
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);*/
+    width:240px;
+    height:320px;
+    background:#262626;
+    box-sizing:border-box;
+    padding:15px;
+    transition:.5s;
+    overflow:hidden;
+}
+.box p{
+    margin:0;
+    padding:0;color:#fff;
+    font-size:14px;
+    transition:.5s;
+    transition-delay:.5s;
+    transform:scale(.8);
+}
+.box:before{
+    content:"";
+    width:0;
+    height:0;
+    position:absolute;
+    top:0;
+    left:0;
+    border-top:2px solid #fff;
+    border-left:2px solid #fff;
+    opacity:0;
+    transition:.5s;
+    box-sizing:border-box;
+}
+.box:after{
+    content:"";
+    width:0;
+    height:0;
+    position:absolute;
+    bottom:0;
+    right:0;
+    border-bottom:2px solid #fff;
+    border-right:2px solid #fff;
+    opacity:0;
+    transition:.5s;
+    box-sizing:border-box;
+}
+.box:hover:before{
+    width:100%;
+    height:100%;
+    opacity:1;
+}
+.box:hover:after{
+    width:100%;
+    height:100%;
+    opacity:1;
+}
+.box:hover p{
+    transform:scale(1);
+}
+.box:hover{
+    box-shadow:0 25px 30px rgba(0,0,0,.5);
+}
+
+.box .r1{
+    position:absolute;
+    top:0px;
+    left:-120%;
+    width:100%;
+    height:100%;
+    background-color:rgba(255,255,255,.5);
+    transition:.5s;
+    transition-delay:1s;
+    transform:skewX(5deg);
+}
+.box:hover .r1{
+    left:120%;
+}
+.box .r2{
+    position:absolute;
+    top:0px;
+    left:-120px;
+    width:100%;
+    height:100%;
+    background-color:rgba(255,255,255,.5);
+    transition:.5s;
+    transition-delay:1s;
+    transform:skewX(5deg);
+}
+.box:hover .r2{
+    left:120px;
+}
+.box .r3{
+    position:absolute;
+    top:0px;
+    left:-120px;
+    width:100%;
+    height:100%;
+    background-color:rgba(255,255,255,.5);
+    transition:.5s;
+    transition-delay:1s;
+    transform:skewX(5deg);
+}
+.box:hover .r3{
+    left:0;
+}
+.box .r4{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    background-color:rgba(255,255,255,.5);
+    transition:.5s;
+    transition-delay:1s;
+    transform:skewX(10deg);
+}
+.box:hover .r4{
+    left:0;
+}

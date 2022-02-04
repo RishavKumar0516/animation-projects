@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.container{
+    width:100%;
+    height:100vh;
+    background:aquamarine;
+    position:sticky;/* to show these type of effect we always need to set the position to sticky, these shows awesome effect */
+    top:0;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+}
+
+ img{
+    position:absolute;
+    transition:.2s; 
+}
+ .container2{
+    width:100%;
+    height:100vh;
+    position:relative;  
+    top:0;
+    background:hotpink;
+} 
+/* section{
+    position:sticky;
+    width:100%;
+    height:100vh;
+    background-attachment:fixed;
+}section:nth-child(1){
+    background:hotpink;
+    z-index:1;
+}
+section:nth-child(2){
+    background:deepskyblue;
+    z-index:1;
+}
+section:nth-child(3){
+    background:#000057;
+    z-index:1;
+} */

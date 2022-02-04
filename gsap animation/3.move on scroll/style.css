@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+header, footer{
+    height:100vh;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+header h1, footer h1{
+    font-size:5em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+.animation{
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+}
+.bool{
+    position:absolute;
+    top:50%;
+    left:0;
+    transition: ease-in;
+}

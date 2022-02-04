@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- these is the downloadable css file of the aos scroll animation -->
+    <link rel="stylesheet" href="aos-animation/aos.css">
+
+    <!-- these is the css Aos CDN link which helps to perform scroll animation -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <title>animation on scroll</title>
+</head>
+<body>
+    <section>
+      <h1 data-aos="fade-up"> Lorem Ipsum Dolor Sit Amet </h1>
+    </section>
+
+    <section>
+      <h1 data-aos="fade-left"> Lorem Ipsum Dolor Sit Amet </h1>
+    </section>
+
+    <section>
+      <h1  data-aos="fade-right"> Lorem Ipsum Dolor Sit Amet </h1>
+    </section>
+
+    <section>
+      <h1  data-aos="flip-left"> Lorem Ipsum Dolor Sit Amet </h1>
+    </section>
+
+    <section>
+      <h1 data-aos="flip-down"> Lorem Ipsum Dolor Sit Amet </h1>
+    </section>
+
+    <section>
+      <h1 data-aos="fade-up" data-aos-duration="3000"> Lorem Ipsum Dolor Sit Amet </h1>
+    </section>
+
+<!-- these is J-Query CDN having no any relation with the scroll animation . these is used when j-Query code is written -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    
+
+    <!-- scroll animation -->
+
+    
+    <!-- these is the downloadable javascript file of the aos scroll animation -->
+    <script src="aos-animation/aos.js"></script>
+
+
+    <!-- these is the  Aos javascript CDN link which helps to perform scroll animation -->
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+
+<!-- these is initialization  -->
+    <script>
+         AOS.init( {
+             offset:200,
+             duration:2000,
+         });
+    </script>
+</body>
+</html>

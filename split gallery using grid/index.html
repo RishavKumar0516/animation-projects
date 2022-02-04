@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>split gallery using grid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.5/dist/splitting-cells.css">
+</head>
+<body>
+    <div class="tiler">
+        <img src="img/one.jpg" alt="">
+    </div>
+
+    <div class="tiler">
+        <img src="img/two.jpg" alt="">
+    </div>
+
+    <div class="tiler">
+        <img src="img/three.jpg" alt="">
+    </div>
+
+    <div class="tiler">
+        <img src="img/four.jpg" alt="">
+    </div>
+
+    <div class="tiler">
+        <img src="img/five.jpg" alt="">
+    </div>
+
+    <div class="tiler">
+        <img src="img/six.jpg" alt="">
+    </div>
+
+    <div class="tiler">
+        <img src="img/seven.jpg" alt="">
+    </div>
+
+    <div class="tiler">
+        <img src="img/eight.jpg" alt="">
+    </div>
+
+    <div class="tiler">
+        <img src="img/nine.jpg" alt="">
+    </div>
+
+<script src="https://unpkg.com/splitting@1.0.5/dist/splitting.js"></script>
+<script>
+    console.clear();
+    splitting({
+        target:'.tiler',
+        by:'cells',
+        row:3,
+        columns:3,
+        image:true
+    });
+</script>
+</body>
+</html>

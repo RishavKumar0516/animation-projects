@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moving background image on scroll</title>
+    <link rel="stylesheet" href="css.css">
+
+<body>
+    <section id="one"></section>
+    <section id="two"></section>
+
+    <!-- <script src="jquery-1.12.4.min.js"></script> -->
+    <script>
+window.addEventListener('scroll', function(){
+    let ele = document.getElementById('one');
+    // let scroll = ele.getBoundingClientRect().bottom;
+     let scroll = scrollY;
+
+    console.log(scroll);
+    // console.log(ele);
+        ele.style.backgroundPositionY = + -scroll/10 + "px";/* agar value positive hota hai tou downward move karega aur agar scroll ka value negative hoga tou upward move karega. */
+
+        /* usse tarah jab negative value hoga tou left side move karega aur agar positive value hoga tou right side move karega. */
+
+});
+
+
+    </script>
+</body>
+</html>

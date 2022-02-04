@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    margin:0;
+    padding:0;
+    background:#59aca1;
+    width:100%;
+    height:100vh;
+
+}
+.container3 .center{
+    position:absolute;
+    top:50%;
+    left:0;
+    transform:translate(0,-50%);
+    width:100%;
+    text-align:center;
+    
+}
+.container3 .center span{
+    font-family:sans-serif;
+    color:#fff;
+    font-size:40px;
+    text-shadow:0 2px 5px rgba(0,0,0,.5);
+}
